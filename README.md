@@ -1,6 +1,6 @@
 # LMDeploy-Jetson
 LMDeploy jetson docker镜像构建，基于dustynv大神的vllm镜像构建。
-
+### Dockerfile:
 ```Dockerfile
 # 基础镜像
 FROM dustynv/vllm:0.9.2-r36.4-cu128-24.04
@@ -26,3 +26,12 @@ RUN pip install git+https://github.com/InternLM/lmdeploy.git \
 CMD ["tail", "-f", "/dev/null"]
 
 ```
+### 构建示例：
+```bash
+docker build -t lmdeploy-jetson-test:v1.0 \
+  --build-arg HTTP_PROXY=http://172.16.16.47:7890 \
+  --build-arg HTTPS_PROXY=http://172.16.16.47:7890 \
+  .
+```
+
+| 如果基础镜像版本落后，可访问：https://hub.docker.com/r/dustynv/vllm/tags 获取dustynv大神的最新基础镜像。
