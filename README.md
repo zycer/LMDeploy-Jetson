@@ -34,4 +34,4 @@ docker build -t lmdeploy-jetson-test:v1.0 \
   .
 ```
 
-| 如果基础镜像版本落后，可访问：https://hub.docker.com/r/dustynv/vllm/tags 获取dustynv大神的最新基础镜像。
+> 如果基础镜像版本落后，可访问：https://hub.docker.com/r/dustynv/vllm/tags 获取dustynv大神的最新基础镜像。
